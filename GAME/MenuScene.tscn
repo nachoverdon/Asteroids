@@ -1,6 +1,8 @@
-[gd_scene format=1]
+[gd_scene load_steps=2 format=1]
 
-[node name="ColorFrame" type="ColorFrame"]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+
+[node name="Black Background" type="ColorFrame"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -10,23 +12,8 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 1024.0
 margin/bottom = 600.0
-color = Color( 0, 0, 0, 1 )
+color = Color( 0.00392157, 0.00392157, 0.00392157, 1 )
 
-[node name="Viewport" type="Viewport" parent="."]
-
-rect = Rect2( 0, 0, 1024, 600 )
-own_world = false
-world = null
-transparent_bg = false
-render_target/enabled = false
-render_target/v_flip = false
-render_target/clear_on_new_frame = true
-render_target/filter = false
-render_target/gen_mipmaps = false
-render_target/update_mode = 2
-audio_listener/enable_2d = false
-audio_listener/enable_3d = false
-physics/object_picking = false
-gui/disable_input = false
+[node name="PlayerBody" parent="." instance=ExtResource( 1 )]
 
 
